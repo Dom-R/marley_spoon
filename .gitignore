@@ -1,2 +1,5 @@
 # RSpec example file
 spec/examples.txt
+
+# Bundler config
+/.bundle/
