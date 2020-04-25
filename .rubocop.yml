@@ -9,5 +9,8 @@
 #
 # See https://github.com/rubocop-hq/rubocop/blob/master/manual/configuration.md
 
+Layout/LineLength:
+  Max: 120
+
 Style/Documentation:
   Enabled: false
