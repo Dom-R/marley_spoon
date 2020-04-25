@@ -10,5 +10,7 @@ require './initializers/contentful_model.rb'
 require './models/recipe.rb'
 
 get '/' do
-  'Hello, Marley Spoon!'
+  recipes = Recipe.all_recipes
+
+  erb :index, locals: { recipes: recipes }
 end
