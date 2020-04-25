@@ -7,6 +7,7 @@ Bundler.require(:default)
 Bundler.require(Sinatra::Base.environment)
 
 require './initializers/contentful_model.rb'
+require './models/recipe.rb'
 
 get '/' do
   'Hello, Marley Spoon!'
