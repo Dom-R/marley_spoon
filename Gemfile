@@ -13,9 +13,12 @@ gem 'sinatra'
 group :test do
   gem 'rack-test'
   gem 'rspec'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
+  gem 'pry'
   gem 'rubocop'
   gem 'rubocop-rspec'
 end
