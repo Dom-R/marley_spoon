@@ -21,4 +21,5 @@ group :development do
   gem 'pry'
   gem 'rubocop'
   gem 'rubocop-rspec'
+  gem 'shotgun'
 end
