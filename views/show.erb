@@ -1,0 +1,13 @@
+<h1><%= recipe.title %></h1>
+<img src="<%= recipe.photo.url %>"/></br>
+<% if recipe.tags %>
+  <div id="tags">
+    <b>Tags: </b><%= recipe.tags.map(&:name).join(', ') %></br>
+  </div>
+<% end %>
+<b>Description: </b><%= recipe.description %></br>
+<% if recipe.chef %>
+  <div id="chef">
+    <b>Chef: </b><%= recipe.chef.name %></br>
+  </div>
+<% end %>
