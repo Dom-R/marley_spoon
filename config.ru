@@ -1,5 +1,5 @@
 # frozen_string_literal:true
 
-require './application.rb'
+require './config/application.rb'
 
 run Sinatra::Application
