@@ -34,4 +34,22 @@ RSpec.describe Recipe do
       end
     end
   end
+
+  describe '#tags_names', :vcr do
+    context 'when recipe has tags' do
+      it 'returns the tags names' do
+        recipe = Recipe.find('437eO3ORCME46i02SeCW46')
+
+        expect(recipe.tags_names).to eq 'gluten free, healthy'
+      end
+    end
+
+    context 'when recipe does not have tags' do
+      it 'returns nil' do
+        recipe = Recipe.find('2E8bc3VcJmA8OgmQsageas')
+
+        expect(recipe.tags_names).to be_nil
+      end
+    end
+  end
 end

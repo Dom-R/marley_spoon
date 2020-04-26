@@ -6,4 +6,10 @@ class Recipe < ContentfulModel::Base
   def self.all_recipes
     all.load!
   end
+
+  def tags_names
+    return nil if tags.nil?
+
+    tags.map(&:name).join(', ')
+  end
 end

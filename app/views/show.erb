@@ -1,8 +1,8 @@
 <h1><%= recipe.title %></h1>
 <img src="<%= recipe.photo.url %>"/></br>
-<% if recipe.tags %>
+<% if recipe.tags_names %>
   <div id="tags">
-    <b>Tags: </b><%= recipe.tags.map(&:name).join(', ') %></br>
+    <b>Tags: </b><%= recipe.tags_names %></br>
   </div>
 <% end %>
 <b>Description: </b><%= recipe.description %></br>
