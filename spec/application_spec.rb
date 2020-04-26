@@ -40,6 +40,17 @@ RSpec.describe Sinatra::Application do
         ]
       )
     end
+
+    it 'links to detailed view' do
+      visit '/'
+
+      links = page.find_all('a').map { |link| link['href'] }
+
+      expect(links).to match_array %w[/4dT8tcb6ukGSIg2YyuGEOm
+                                      /5jy9hcMeEgQ4maKGqIOYW6
+                                      /2E8bc3VcJmA8OgmQsageas
+                                      /437eO3ORCME46i02SeCW46]
+    end
   end
 
   describe 'GET /:id', :vcr do

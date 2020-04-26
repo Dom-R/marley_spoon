@@ -1,4 +1,6 @@
 <% recipes.each do |recipe| %>
-  <img src="<%= recipe.photo.url %>"/>
-  <%= recipe.title %></br>
+  <a href="/<%= recipe.id %>">
+    <h1><%= recipe.title %></h1></br>
+    <img src="<%= recipe.photo.url %>"/>
+  </a>
 <% end %>
