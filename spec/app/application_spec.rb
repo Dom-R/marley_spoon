@@ -6,7 +6,7 @@ require 'capybara_helper'
 require 'vcr_helper'
 
 RSpec.describe Sinatra::Application do
-  describe 'GET /', :vcr do
+  describe 'GET /', vcr: { cassette_name: 'recipes' } do
     it 'returns status 200' do
       get '/'
 
@@ -53,7 +53,7 @@ RSpec.describe Sinatra::Application do
     end
   end
 
-  describe 'GET /:id', :vcr do
+  describe 'GET /:id', vcr: { cassette_name: 'recipe' } do
     it 'returns status 200' do
       get '/2E8bc3VcJmA8OgmQsageas'
 

@@ -4,7 +4,7 @@ require 'spec_helper'
 require 'vcr_helper'
 
 RSpec.describe Recipe do
-  describe '.all_recipes', :vcr do
+  describe '.all_recipes', vcr: { cassette_name: 'recipes' } do
     it 'return all entities with content type recipe' do
       recipes = Recipe.all_recipes
 
@@ -16,7 +16,7 @@ RSpec.describe Recipe do
     end
   end
 
-  describe '.find', :vcr do
+  describe '.find', vcr: { cassette_name: 'recipe' } do
     context 'when entity exists' do
       it 'returns the recipe' do
         recipe = Recipe.find('2E8bc3VcJmA8OgmQsageas')
@@ -35,7 +35,7 @@ RSpec.describe Recipe do
     end
   end
 
-  describe '#tags_names', :vcr do
+  describe '#tags_names', vcr: { cassette_name: 'recipe' } do
     context 'when recipe has tags' do
       it 'returns the tags names' do
         recipe = Recipe.find('437eO3ORCME46i02SeCW46')
