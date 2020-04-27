@@ -33,12 +33,15 @@ CONTENTFUL_ACCESS_TOKEN=<Access Token> CONTENTFUL_SPACE=<Space ID> command
 ```
 
 ### Local
-To run locally, you can use _rack_, _shotgun_, or _docker_.
+To run locally, you can use _rack_, _shotgun_, _puma_, or _docker_.
 ```bash
 bundle exec rackup -p 4567
 ```
 ```bash
 bundle exec shotgun -p 4567
+```
+```bash
+bundle exec puma -p 4567
 ```
 ```bash
 docker-compose up -d

@@ -9,4 +9,4 @@ RUN bundle config set without 'test development' && bundle install
 
 COPY . .
 
-CMD ["bundle", "exec", "rackup", "--host", "0.0.0.0", "-p", "4567"]
+CMD ["bundle", "exec", "puma", "-p", "4567"]
